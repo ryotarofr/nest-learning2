@@ -16,3 +16,12 @@ export class SignupDto {
   @MinLength(5, { message: "5文字以上にしてください" })
   password: string
 }
+
+
+export class SigninDto {
+  @IsEmail()
+  email: string
+
+  @IsString()
+  password: string
+}
